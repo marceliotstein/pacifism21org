@@ -144,6 +144,7 @@
              }
           ?>
           <?php 
+            // do not show title for "item" content type
             if (!empty($title)) {
               if (empty($node)) {
                 print '<h1>' . $title . '</h1>';
