@@ -143,9 +143,17 @@
                }
              }
           ?>
-          <?php if (!empty($title)): ?>
-            <h1><?php print $title ?></h1>
-          <?php endif; ?>
+          <?php 
+            if (!empty($title)) {
+              if (empty($node)) {
+                print '<h1>' . $title . '</h1>';
+              } else {
+                if ($node->type!="item") {
+                  print '<h1>' . $title . '</h1>';
+                }
+              }
+            }
+          ?>
           <?php print $messages; ?>
           <?php if (!empty($tabs)): ?>
             <?php print render($tabs); ?>
