@@ -144,15 +144,17 @@
              }
           ?>
           <?php 
-            // do not show title for "item" content type
+            // special banner and title for "item" content type
             if (!empty($title)) {
-              if (empty($node)) {
-                print '<h1>' . $title . '</h1>';
-              } else {
-                if ($node->type!="item") {
-                  print '<h1>' . $title . '</h1>';
+              if (!empty($node)) {
+                if ($node->type=="item") {
+                  print '<img class="ptbanner img-responsive" src="/sites/default/files/ptbanner1200.jpg" />';
+                  print '<h2>' . $title . '</h2>';
                 }
               }
+            } else {
+              // all content types other than item
+              print '<h1>' . $title . '</h1>';
             }
           ?>
           <?php print $messages; ?>
