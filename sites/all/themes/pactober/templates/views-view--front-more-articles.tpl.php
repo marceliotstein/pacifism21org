@@ -45,4 +45,5 @@
     <?php print $pager; ?>
   <?php endif; ?>
 
+  <center><h2><a href="/all-articles">More Articles ...</a></h2></center>
 </div><?php /* class view */ ?>
