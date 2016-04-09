@@ -73,6 +73,17 @@
 * @ingroup themeable
 */
 ?>
+<? 
+  // determine if sidebar should be present
+  $include_sidebar = true;
+  if ($is_front) {
+    $include_sidebar = false;
+  } else if ($title=="All Articles") {
+    $include_sidebar = false;
+  } else if ($title=="Peaceful Thoughts") {
+    $include_sidebar = false;
+  }
+?>
 <div class="navbar navbar-default navbar-fixed-top" id="xyzsubnav">
   <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
     <div class="navbar-header">
@@ -140,7 +151,11 @@
     <?php else: ?>
       <!-- STANDARD PAGE TEMPLATE -->
       <div class="row pac-readable-core">
-        <div class="pac-readable-main col-xs-12 col-sm-12 col-md-8">
+        <?php if ($include_sidebar): ?>
+          <div class="pac-readable-main col-xs-12 col-sm-12 col-md-8">
+        <?php else: ?>
+          <div class="pac-readable-main col-xs-12 col-sm-12 col-md-12">
+        <?php endif; ?>
           <a id="main-content"></a>
           <?php 
              // optional section heading 
@@ -185,21 +200,23 @@
             <div class="addthis_sharing_toolbox"></div>
           </div>
         </div>
-        <div class="hidden-xs hidden-sm col-md-4">
-          <div class="pac-rightbar">
-            <?php
-              print render($page['highlighted']);
-            ?>
-            <div class="rightbar-box rightbar-search">
-              <h2 class="rightbar-title">Search</h2>
+        <?php if ($include_sidebar): ?>
+          <div class="hidden-xs hidden-sm col-md-4">
+            <div class="pac-rightbar">
               <?php
-                $block = module_invoke('search', 'block_view');
-                $search_render = render($block);
-                print $search_render;
+                print render($page['highlighted']);
               ?>
+              <div class="rightbar-box rightbar-search">
+                <h2 class="rightbar-title">Search</h2>
+                <?php
+                  $block = module_invoke('search', 'block_view');
+                  $search_render = render($block);
+                  print $search_render;
+                ?>
+              </div>
             </div>
           </div>
-        </div>
+        <?php endif; ?>
       </div>
     <?php endif; ?>
   </div>
