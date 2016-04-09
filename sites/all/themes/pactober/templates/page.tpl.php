@@ -123,7 +123,20 @@
   </div>
   <div class="col-xs-12 col-xl-10">
     <?php if ($is_front): ?>
-      <?php print views_embed_view('front_stories', 'block_1'); ?>
+      <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
+        <?php print views_embed_view('front_top_articles', 'block_1'); ?>
+        <?php print views_embed_view('front_top_items', 'block_1'); ?>
+        <?php print views_embed_view('front_more_articles', 'block_1'); ?>
+        <?php print views_embed_view('front_more_items', 'block_1'); ?>
+      </div>
+      <div class="hidden-xs hidden-sm col-md-6 col-lg-6 col-xl-6">
+        <?php print views_embed_view('front_top_articles', 'block_1'); ?>
+        <?php print views_embed_view('front_more_articles', 'block_1'); ?>
+      </div>
+      <div class="hidden-xs hidden-sm col-md-6 col-lg-6 col-xl-6">
+        <?php print views_embed_view('front_top_items', 'block_1'); ?>
+        <?php print views_embed_view('front_more_items', 'block_1'); ?>
+      </div>
     <?php else: ?>
       <!-- STANDARD PAGE TEMPLATE -->
       <div class="row pac-readable-core">

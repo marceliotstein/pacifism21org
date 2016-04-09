@@ -215,10 +215,10 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'db86539_pactober',
-      'username' => 'db86539',
-      'password' => 'mstein123',
-      'host' => 'internal-db.s86539.gridserver.com',
+      'database' => 'pacifism21org',
+      'username' => 'root',
+      'password' => 'root',
+      'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',
       'prefix' => '',
