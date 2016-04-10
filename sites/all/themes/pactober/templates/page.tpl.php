@@ -88,7 +88,7 @@
   <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
     <div class="navbar-header">
 
-      <a href="/" class="navbar-btn btn-logo btn-default"><img class="paclogo" width="240" src="/sites/all/themes/pactober/images/Pac21Straight416.jpg" /></a>
+      <a href="/" class="navbar-btn btn-logo btn-default"><img class="paclogo" width="240" src="sites/all/themes/pactober/images/Pac21Straight416.jpg" /></a>
 
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse2">
         <span class="sr-only">Toggle navigation</span>
@@ -109,7 +109,7 @@
   <div class="hidden-xs col-sm-12">
     <div class="navbar-header">
 
-      <a href="/" class="navbar-btn btn-logo btn-default"><img class="paclogo" src="/sites/all/themes/pactober/images/Pac21Straight416.jpg" /></a>
+      <a href="/" class="navbar-btn btn-logo btn-default"><img class="paclogo" src="sites/all/themes/pactober/images/Pac21Straight416.jpg" /></a>
 
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse2">
         <span class="sr-only">Toggle navigation</span>
@@ -176,7 +176,8 @@
             if (!empty($title)) {
               if (!empty($node)) {
                 if ($node->type=="item") {
-                  print '<img class="ptbanner img-responsive" src="/sites/default/files/ptbanner1200.jpg" />';
+                  print '<img class="ptbanner img-responsive" src="sites/all/themes/pactober/images/ptbanner1200.jpg" />';
+                  print '<div class="pac-art-credit">Artwork: <a href="http://espenerichsen.blogspot.com">Espen Erichsen</a></div>';
                   print '<h2>' . $title . '</h2>';
                 }
               }

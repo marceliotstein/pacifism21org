@@ -1,0 +1,2 @@
+                  print '<img class="ptbanner img-responsive" src="sites/all/themes/pactober/images/ptbanner1200.jpg" />';
+                  print '<div class="pac-art-credit">Artwork: <a href="http://espenerichsen.blogspot.com">Espen Erichsen</a></div>';
