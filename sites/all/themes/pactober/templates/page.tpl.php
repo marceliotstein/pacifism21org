@@ -176,7 +176,7 @@
             if (!empty($title)) {
               if (!empty($node)) {
                 if ($node->type=="item") {
-                  print '<img class="ptbanner img-responsive" src="sites/all/themes/pactober/images/ptbanner1200.jpg" />';
+                  print '<a href="peaceful-thoughts"><img class="ptbanner img-responsive" src="sites/all/themes/pactober/images/ptbanner1200.jpg" /></a>';
                   print '<div class="pac-art-credit">Artwork: <a href="http://espenerichsen.blogspot.com">Espen Erichsen</a></div>';
                   print '<h2>' . $title . '</h2>';
                 }

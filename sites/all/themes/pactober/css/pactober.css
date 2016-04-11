@@ -1,5 +1,12 @@
 /* pactober.css -- card style bootstrap theme for pacifism21 */
 
+.pac-blog-title-img {
+  margin: 0px;
+  padding-top: 40px;
+  padding-left: 204px;
+  font-size: 1.2em;
+}
+
 .pac-blog-date {
   font-family: Ubuntu;
   margin-top: 0px;
@@ -51,7 +58,7 @@
 }
 
 a {
-  color: #20b070;
+  color: #109040;
 }
 
 .pac-topic-link {
