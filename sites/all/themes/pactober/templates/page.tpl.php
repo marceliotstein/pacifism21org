@@ -88,7 +88,7 @@
   <div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
     <div class="navbar-header">
 
-      <a href="/" class="navbar-btn btn-logo btn-default"><img class="paclogo" width="240" src="sites/all/themes/pactober/images/Pac21Straight416.jpg" /></a>
+      <a href="/" class="navbar-btn btn-logo btn-default"><img class="paclogo" width="240" src="/sites/all/themes/pactober/images/Pac21Straight416.jpg" /></a>
 
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse2">
         <span class="sr-only">Toggle navigation</span>
@@ -109,7 +109,7 @@
   <div class="hidden-xs col-sm-12">
     <div class="navbar-header">
 
-      <a href="/" class="navbar-btn btn-logo btn-default"><img class="paclogo" src="sites/all/themes/pactober/images/Pac21Straight416.jpg" /></a>
+      <a href="/" class="navbar-btn btn-logo btn-default"><img class="paclogo" src="/sites/all/themes/pactober/images/Pac21Straight416.jpg" /></a>
 
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse2">
         <span class="sr-only">Toggle navigation</span>
@@ -137,6 +137,7 @@
       <div class="col-xs-12 col-sm-12 hidden-md hidden-lg hidden-xl">
         <?php print views_embed_view('front_top_articles', 'block_1'); ?>
         <?php print views_embed_view('front_top_items', 'block_1'); ?>
+        <?php print views_embed_view('front_top_touts', 'block_1'); ?>
         <?php print views_embed_view('front_more_articles', 'block_1'); ?>
         <?php print views_embed_view('front_more_items', 'block_1'); ?>
       </div>
@@ -146,6 +147,7 @@
       </div>
       <div class="hidden-xs hidden-sm col-md-6 col-lg-6 col-xl-6">
         <?php print views_embed_view('front_top_items', 'block_1'); ?>
+        <?php print views_embed_view('front_top_touts', 'block_1'); ?>
         <?php print views_embed_view('front_more_items', 'block_1'); ?>
       </div>
     <?php else: ?>
