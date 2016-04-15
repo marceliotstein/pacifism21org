@@ -1,31 +1,33 @@
 <?php
-// front page blog listing 
+// front page tout listing 
 ?>
 <?php
 $title = "";
 $body = "";
 $type = "";
+$background_image = "";
 foreach ($fields as $id => $field) {
   if ($id=="title") {
     $title = $field->content;
   } else if ($id=="body") {
     $body = $field->content;
+  } else if ($id=="field_background_image") {
+    $background_image = $field->content;
   } else if ($id=="type") {
     $type = $field->content;
+  } else {
+    //print "id is " . $id . "<br />";
   }
 }
 ?>
-<?php if ($type=="Item"): ?>
-  <div class="well">
-    <div class="pac-blog-title-img" style="background-image: url(sites/all/themes/pactober/images/ptfromtheblog1200.jpg)">
-      <?php print $title ?>
-    </div>
-  </div>
-<?php else: ?>
-  <div class="well">
-    <div class="pac-tout-front img-responsive">
-      <div class="pac-blog-title"><?php print $title ?></div>
+<div class="well">
+  <div class="pac-tout-front">
+    <div class="pac-blog-title"><?php print $title ?></div>
+    <?php if (!empty($background_image)): ?>
+      <center><?php print $background_image ?></center>
+    <?php endif; ?>
+    <?php if (!empty($body)): ?>
       <?php print $body ?>
-    </div>
+    <?php endif; ?>
   </div>
-<?php endif; ?>
+</div>
